@@ -16,12 +16,26 @@ Developer Test
 ==============
 
 1.  What editor will you use to edit this file, and why?
+    A: I will be using VisualStudio (but I normally use SublimeText)
 2.  Some of the questions will ask for a solution in the language of
     your choice.  What language(s) will you choose, and why?
+    A: I will be using PHP because it is the one I have the most experience with.
 3.  Explain the difference between testing and debugging.
+    A: Testing is more preventative and finds issues before an application is pushed to production. 
+    The purpose is to make sure the application runs correctly and gives expected outputs and reactions to user interaction. 
+    Debugging is typically done after an issue has already been raised and usually happens after the deployment and/or testing processes have occured. 
+    Debugging can be more difficult because, if you tested correctly, the bug would be happening from something unexpected and can take longer to analyze.
 4.  Consider a user querying a search engine.  Describe, in as much
     detail as you like, what happens between the user clicking the
     "submit" button and the display of the results.
+    A: 
+        1. Once a user submits their query, the keywords are sent to the search engine application (through a GET or POST request).
+        2. The search engine has already indexed websites, meaning it has made a copy of the site page and related it to the url of that page. This is done by web crawlers. These indexes are typically ordered and sorted by some algorithm. The best known algorithm is called PageRank[ref: 1], which sorts sites based on popularity. Other factors influence this sort and the results, such as how often the site is updated and if it is from a trustworthy site (https, certificates, etc.). These indexes relate keywords to the url as well. The keywords have traditionally been taken from the html meta tags, but some of these process have been changing for awhile.
+        3. The user's keywords are compared with this index and a result set is returned.
+        4. The user's browser then displays this result set and other filters could possibly be applied such as the user's history and profile. This is usually applied to a Google search, unless the user turns the functionality off in their search settings.
+
+        References:
+        1: http://www.bbc.co.uk/guides/ztbjq6f
 
 The two tables below describe relationships between employees,
 managers, and departments (the columns employee.mgr_id and
